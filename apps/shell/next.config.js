@@ -7,11 +7,11 @@ module.exports = {
       beforeFiles: [
         {
           source: '/docs/:path*',
-          destination: `http://localhost:3002/docs/:path*`,
+          destination: `${process.env.DOCS_ZONE_URL}/docs/:path*`,
         },
         {
           source: '/web/:path*',
-          destination: `http://localhost:3001/web/:path*`,
+          destination: `${process.env.WEB_ZONE_URL}/web/:path*`,
         },
       ],
     }
